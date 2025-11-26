@@ -1,0 +1,193 @@
+    /* ===== Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      color: black;
+    }
+
+    /* ===== Background ===== */
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(#1e9e8c, rgb(0 0 0 / 30%));
+      overflow: hidden;
+    }
+
+    /* ===== Glass Login Box ===== */
+    .login-box {
+      background: rgb(94, 209, 169);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 444px;
+      text-align: center;
+       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      animation: float 6s ease-in-out infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-weight: 900;
+       
+    }
+
+    /* ===== Floating Animation ===== */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* ===== Hover Effect ===== */
+    .login-box:hover {
+      transform: scale(1.05);
+       box-shadow: 0 0 80px rgba(255, 140, 0, 0.6),
+              0 0 40px rgba(255, 255, 255, 0.9);;
+    }
+
+    /* ===== Title ===== */
+    .login-box h2 {
+      margin-bottom: 25px;
+      font-size: 1.8em;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    }
+
+    /* ===== Input Fields ===== */
+    .input-box {
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    .input-box label {
+      display: block;
+      margin-bottom: 6px;
+      
+      font-weight: 600;
+      font-size: 0.9em;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.2);
+     
+      font-size: 1em;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .input-box input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ===== Input Focus ===== */
+    .input-box input:focus {
+      border: 1px solid #ff9f43;
+      box-shadow: 0 0 15px rgba(255,165,0,0.7);
+      background-color: rgba(255,255,255,0.3);
+      transform: scale(1.02);
+    }
+
+    /* ===== Show Password ===== */
+    .show-password {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 8px 0 15px;
+      font-size: 0.85em;
+       
+    }
+
+    .show-password input[type="checkbox"] {
+      width: auto;
+      transform: scale(0.9);
+    }
+
+    .show-password label {
+      cursor: pointer;
+    }
+
+    /* ===== Button ===== */
+    .input-box input[type="submit"] {
+      background: linear-gradient(45deg, #ff9f43, #ff6b6b);
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(255, 105, 0, 0.4);
+      
+      margin-top: 10px;
+    }
+
+    .input-box input[type="submit"]:hover {
+      background: linear-gradient(45deg, #ff6b6b, #ff9f43);
+      transform: scale(1.05);
+      box-shadow: 0 6px 25px rgba(255, 105, 0, 0.6);
+    }
+
+    /* ===== Links ===== */
+    .links {
+      display: flex;
+      justify-content: space-between;
+      margin: 12px 0 18px;
+    }
+
+    .links a {
+       
+      font-size: 0.85em;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .links a:hover {
+      color: #ff6b6b;
+      text-decoration: underline;
+    }
+
+    /* ===== Divider Text ===== */
+    .or {
+      margin: 10px 0;
+      font-size: 0.85em;
+     
+    }
+
+    /* ===== Social Buttons ===== */
+    .social-login {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-login a {
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    .social-login img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .social-login a:hover {
+      transform: scale(1.2);
+    }
+
+    /* ===== Error Message ===== */
+    #errorMsg {
+      color: #ff0000;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      font-size: 0.9em;
+      display: none;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
